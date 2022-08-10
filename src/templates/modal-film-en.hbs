@@ -1,0 +1,53 @@
+<button type='button' class='btn-modal-film'>&#10006</button>
+
+<div class='film-img'>
+  {{#if poster_path}}
+    <img
+      src='https://image.tmdb.org/t/p/w500{{poster_path}}'
+      alt='{{title}}'
+      data-id='{{id}}'
+    />
+  {{else}}
+    <img
+      src='https://i.ibb.co/dJhXHZt/filmoteka.png'
+      alt='{{title}}'
+      data-id='{{id}}'
+    />
+  {{/if}}
+</div>
+
+<div class='film-list'>
+  <p class='film-title'>{{title}}</p>
+  <div class='film-info'>
+    <div class='film-text vote-film'>
+      <p class='film-text__left'>Vote / Votes</p>
+      <p class='film-text film-text__right'>
+        <span class='box-film'>{{vote_average}}</span>
+        /
+        <span class='box-film-vote'>{{vote_count}}</span>
+      </p>
+    </div>
+    <div class='film-text'>
+      <p class='film-text__left'>Popularity</p>
+      <p class='film-text__right'>{{popularity}}</p>
+    </div>
+    <div class='film-text'>
+      <p class='film-text__left'>Original Title</p>
+      <p class='film-text__right'>{{original_title}}</p>
+    </div>
+    <div class='film-text'>
+      <p class='film-text__left'>Genre</p>
+      <p class='film-text__right'>{{genres}}</p>
+
+    </div>
+  </div>
+  <div class='film-info__item'>
+    <p class='film-text'>ABOUT</p>
+    <p class='film-about'>{{overview}}</p>
+  </div>
+
+  <div class='btn-add' id='js-add-to-list' data-id='{{id}}'>
+    <button class='button' id='add-watched' type='button'>ADD TO WATCHED</button>
+    <button class='button' id='add-queue' type='button'>ADD TO QUEUE</button>
+  </div>
+</div>

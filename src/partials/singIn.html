@@ -1,0 +1,116 @@
+<div class="backdrop-in-reg">
+  <div class="login-modal">
+    <button class="modal-close"></button>
+    <h2 class="login-modal__in login-modal__active" data-lng="ModalIn">
+      sign in
+    </h2>
+    <h2 class="login-modal__up login-modal__noactive" data-lng="ModalUp">
+      sign up
+    </h2>
+    <form class="login-modal_form registration-form" id="from-sing-in">
+      <label class="registration-label">
+        <input type="email" name="email" id="email" required />
+        <div class="label-text" id="label-text-email-in" data-lng="Email">
+          Email
+        </div>
+      </label>
+      <label class="registration-label">
+        <input
+          type="password"
+          name="password"
+          id="password-1"
+          required
+          minlength="6"
+        />
+        <div class="label-text" id="label-text-password-in" data-lng="Password">
+          password
+        </div>
+      </label>
+
+      <br />
+      <input
+        type="checkbox"
+        id="checkbox-log"
+        class="login-modal__custom-checkbox"
+      />
+      <label
+        class="login-modal__keep"
+        for="checkbox-log"
+        data-lng="modal-checkbox"
+        >Keep me Signed in</label
+      >
+      <button class="signin" data-lng="BtnModalIn">Sign In</button>
+      <hr />
+      <div class="social">
+        <ul class="list social__network">
+          <li class="social__block" id="google-login">
+            <div class="social__link">
+              <svg class="social__svg" width="20" height="20">
+                <use href="./images/svg/social-link.svg#icon-google"></use>
+              </svg>
+            </div>
+          </li>          
+        </ul>
+      </div>
+      <a class="login-modal__forgot--password" href="#" data-lng="BadMemary"
+        >Forgot Password?</a
+      >
+    </form>
+    <div class="registration-modal">
+      <form class="registration-form" id="registration-form-un">
+        <label class="registration-label">
+          <input name="name" id="name" type="text" required />
+          <div class="label-text" id="FullName" data-lng="FullName">
+            Full Name
+          </div>
+        </label>
+        <label class="registration-label">
+          <input type="email" name="email" id="email-reg" required />
+          <div class="label-text" data-lng="EmailReg" id="label-text-email-un">
+            Email
+          </div>
+        </label>
+        <label class="registration-label">
+          <input
+            type="password"
+            name="password"
+            id="password-2"
+            required
+            minlength="6"
+          />
+          <div
+            class="label-text"
+            data-lng="PasswordReg"
+            id="label-text-password-un"
+          >
+            password
+          </div>
+        </label>
+        <label class="registration-label">
+          <input
+            type="password"
+            name="confirmPassword"
+            id="password-3"
+            required
+            minlength="6"
+          />
+          <div
+            class="label-text"
+            data-lng="RepeatPasswordReg"
+            id="label-text-repeat-password-un"
+          >
+            Repeat password
+          </div>
+        </label>
+        <button
+          class="registration-btn"
+          type="submit"
+          value="Submit"
+          data-lng="BtnRegistrationg"
+        >
+          Registration
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

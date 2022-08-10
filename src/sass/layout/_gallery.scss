@@ -1,0 +1,81 @@
+@import '../utils/variables';
+
+.gallery {
+  padding-top: 60px;
+  @media screen and (min-width: $mob) {
+    margin-right: 0;
+  }
+  @media screen and (min-width: $tab) {
+    margin-right: -32px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: $desc) {
+    margin-right: -32px;
+  }
+}
+
+.movie-card {
+  background: var(--bg-color);
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    -23px 0 20px -23px rgba(0, 0, 0, 0.6), 23px 0 20px -23px rgba(0, 0, 0, 0.6),
+    inset 0 0 40px rgba(0, 0, 0, 0.1);
+
+  @media screen and (max-width: 767px) {
+    width: 280px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media screen and (max-width: 419px) {
+    margin-bottom: 20px;
+  }
+  cursor: pointer;
+  @media screen and (min-width: $mob) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: $tab) {
+    margin-right: 32px;
+    margin-bottom: 32px;
+    width: 336px;
+  }
+  @media screen and (min-width: $desc) {
+    width: 309px;
+    margin-right: 16px;
+  }
+}
+
+.movie-data {
+  margin-top: 8px;
+  padding: 0 10px 5px;
+}
+
+.movie-info {
+  color: var(--brand-color);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.movie-name {
+  color: #000000;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.movie-card img {
+  object-fit: cover;
+  @media screen and (min-width: $mob) {
+    width: 280px;
+    height: 398px;
+  }
+  @media screen and (min-width: $tab) {
+    width: 346px;
+    height: 445px;
+  }
+  @media screen and (min-width: $desc) {
+    width: 309px;
+    height: 449px;
+  }
+}

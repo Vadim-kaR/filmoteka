@@ -1,0 +1,53 @@
+<button type='button' class='btn-modal-film'>&#10006</button>
+
+<div class='film-img'>
+  {{#if poster_path}}
+    <img
+      src='https://image.tmdb.org/t/p/w500{{poster_path}}'
+      alt='{{title}}'
+      data-id='{{id}}'
+    />{{/if}}
+
+  {{#unless poster_path}}
+    <img
+      src='https://i.ibb.co/dJhXHZt/filmoteka.png'
+      alt='{{title}}'
+      data-id='{{id}}'
+    />
+  {{/unless}}
+</div>
+
+<div class='film-list'>
+  <p class='film-title'>{{title}}</p>
+  <div class='film-info'>
+    <p class='film-text'>
+      <b class='film-text__left'>Рейтинг/Проголосувало</b>
+      <b class='film-text film-text__right vote-film'>
+        <span class='box-film'>{{vote_average}}</span>
+        /
+        <span class='box-film-vote'>{{vote_count}}</span></b>
+    </p>
+    <p class='film-text'>
+      <b class='film-text__left'>Популярнiсть</b>
+      <b class='film-text__right'>{{popularity}}</b>
+    </p>
+    <p class='film-text'>
+      <b class='film-text__left'>Оригінальна назва</b>
+      <b class='film-text__right'>{{original_title}}</b>
+    </p>
+    <p class='film-text'>
+      <b class='film-text__left'>Жанр</b>
+      <b class='film-text__right'>{{genres}}</b>
+
+    </p>
+  </div>
+  <p class='film-info__item'>
+    <b class='film-text'>ОПИС</b>
+    <b class='film-about'>{{overview}}</b>
+  </p>
+
+  <div class='btn-add' id='js-add-to-list' data-id='{{id}}'>
+    <button class='button' id='add-watched' type='button'>Додати до переглянутi</button>
+    <button class='button' id='add-queue' type='button'>Додати до черги</button>
+  </div>
+</div>

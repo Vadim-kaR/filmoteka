@@ -1,0 +1,72 @@
+<header class="header-lib darkmode-ignore">
+  <div class="header-library library-container">
+    <div class="header__wrapper">
+      <div class="header-library__logo">
+        <a class="header__logo-list library" href="./index.html">
+          <svg class="header__logo-icon" height="24" width="24">
+            <use href="./images/svg/sprite.svg#icon-film-logo"></use>
+          </svg>
+          <span class="header__logotext-link">Filmoteka</span>
+        </a>
+      </div>
+      <nav class="header__navigation">
+        <ul class="header-library__navigation">
+          <li class="header__navigation-item sign-in">
+            <a
+              id="signout-library"
+              class="header__navigation-link"
+              data-lng="signOutBtn"
+              href="./index.html"
+            >
+              Sign out
+            </a>
+            <div id="googleUserLibrary" class="header__user-name"></div>
+          </li>
+          <li>
+            <a
+              class="header-library__homePage navigation-btn"
+              data-lng="btnHomelib"
+              href="./index.html"
+              >HOME</a
+            >
+          </li>
+          <li>
+            <a
+              class="header-library__libraryPage navigation-btn"
+              data-lng="btnLibrarylib"
+              href="./library.html"
+              id="myLibraryBtn"
+              >MY LIBRARY</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <select class="header__select library__select" id="lang">
+      <option class="header__select--option" value="en" selected>EN</option>
+      <option class="header__select--option" value="ru">RU</option>
+      <option class="header__select--option" value="uk">UA</option>
+    </select>
+    <ul class="header-library__button">
+      <li>
+        <button
+          class="header-library__btnWatc btn-library"
+          data-lng="btnWatched"
+          id="btn-watched"
+        >
+          <span>WATCHED</span>
+        </button>
+      </li>
+      <li>
+        <button
+          class="header-library__btnQue btn-library active-btn"
+          data-lng="btnTurn"
+          id="btn-queue"
+        >
+          <span>QUEUE</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>

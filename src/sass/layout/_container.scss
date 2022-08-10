@@ -1,0 +1,17 @@
+@import "../utils/variables";
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    @media screen and (min-width: $mob) {
+        width: $mob;
+    }
+    @media screen and (min-width: $tab) {
+        width: $tab;
+        padding: 0 32px;
+      }
+    @media screen and (min-width: $desc) {
+        width: $desc;
+    }
+}

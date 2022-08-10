@@ -1,0 +1,18 @@
+:root {
+  --text-color-main: #000000;
+  --text-color-header: #ffffff;
+  --text-color-footer: #545454;
+  --text-color-alert: #ff001b;
+  --text-color-caption: #ff6b08;
+  --brand-color: #ff6b08;
+  --bg-color: #ffffff;
+  --text-color-footer: #818181;
+  --bg-color-footer: #f7f7f7;
+  --text-sgadow-footer: #6b6f72;
+  --dark-theme: #161107 ;
+  --text-dark-theme: #ffffff;
+}
+// Точки перелома
+$mob: 420px;
+$tab: 768px;
+$desc: 1024px;

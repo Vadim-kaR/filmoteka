@@ -1,0 +1,165 @@
+@import '../utils/variables';
+/////////////////////////////////////////////////переключатель темы//////////////////////////////////////////////
+
+.theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+  border-radius: 25px;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 32px;
+  margin-top: 80px;
+  z-index: 1;
+
+  @media screen and (max-width: $tab) {
+    margin-right: 32px;
+  }
+
+  @media screen and (max-width: $mob) {
+    margin-right: 20px;
+    margin-top: 80px;
+  }
+}
+
+.theme-text {
+  font-size: 10px;
+  color: var(--bg-color);
+}
+
+.switch {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2px;
+  position: absolute;
+  display: inline-block;
+  width: 30px;
+  height: 16px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 9px;
+  width: 9px;
+  left: 4px;
+  bottom: 2.7px;
+  background-color: var(--bg-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: transparent;
+  border: 1px solid #ccc;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px transparent;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/////////////////////////////////////////////style-dark-theme.css//////////////////////////////////////////////////////
+/* light-theme.css */
+.body-theme {
+  color: var(--text-color-main);
+  background-color: var(--text-color-header);
+}
+
+/* dark-theme.css */
+
+.body-theme.darkmode--activated {
+
+   .footer {
+    color: var(--text-dark-theme);
+    background-color: #161107;
+  }
+
+  .footer-text {
+    color: var(--text-dark-theme);
+  }
+
+  .footer-team-link {
+    color: var(--text-dark-theme);
+  } 
+  .signin {
+    color: var(--text-dark-theme);
+    background-color: #161107;
+  }
+
+  .registration-form {
+    color: var(--text-dark-theme);
+    background-color: #161107;
+  }
+
+  .label-text {
+    color: var(--text-dark-theme);
+  }
+
+  .registration-btn {
+    color: var(--text-dark-theme);
+    background-color: #161107;
+  }
+
+  .film-card {
+    background-color: var(--dark-theme);
+    color: var(--text-dark-theme);
+  }
+  .film-about {
+    background-color: var(--dark-theme);
+    color: var(--text-dark-theme);
+  }
+  .film-title {
+    color: var(--text-dark-theme);
+  }
+  .film-text__right {
+    color: var(--text-dark-theme);
+  }
+  .film-text__left {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .pagination__prev,
+  .pagination__next {
+    color: #161107;
+  }
+
+  .registration-btn:hover, .registration-btn:focus, .signin:hover, .signin:focus {
+    background-color: var(--text-color-caption);
+    color: var(--text-color-header);
+  }
+}

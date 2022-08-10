@@ -1,0 +1,25 @@
+{{#each this}}
+  <div class='movie-card'>
+    {{#if poster_path}}
+      <img
+        src='https://image.tmdb.org/t/p/w500{{poster_path}}'
+        alt={{name}}
+        data-id='{{id}}'
+      />
+    {{else}}
+      <img
+        src='https://i.ibb.co/dJhXHZt/filmoteka.png'
+        alt={{name}}
+        data-id='{{id}}'
+      />
+    {{/if}}
+
+    <div class='movie-data'>
+      <h5 class='movie-name'>{{name}}</h5>
+      <p class='movie-info'>{{genres}}
+        |
+        {{release}}
+        <span class='movie-vote'>{{vote_average}}</span></p>
+    </div>
+  </div>
+{{/each}}

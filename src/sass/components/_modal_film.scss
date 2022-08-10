@@ -1,0 +1,269 @@
+.backdrop-film {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.25);
+  transition: visibility 0s linear 0.2s, opacity 0.3s linear;
+  opacity: 0;
+  visibility: hidden;
+}
+.backdrop-film.modal-film--show {
+  transition-delay: 0s;
+  opacity: 1;
+  visibility: visible;
+}
+.film-card {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--bg-color);
+  height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  transition: height 0.2s, max-height 0.2s;
+  width: 280px;
+  padding: 48px 20px 40px 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    -23px 0 20px -23px rgba(0, 0, 0, 0.6), 23px 0 20px -23px rgba(0, 0, 0, 0.6),
+    inset 0 0 40px rgba(0, 0, 0, 0.1);
+
+  @media screen and (max-width: 767px) {
+    overflow: scroll;
+  }
+  @media screen and (min-width: $tab) {
+    display: flex;
+    width: 704px;
+    text-align: left;
+    padding: 40px 68px 40px 36px;
+  }
+  @media screen and (min-width: $desc) {
+    display: flex;
+    text-align: left;
+    padding: 40px 16px 40px 16px;
+  }
+}
+.modal-film--show .film-card {
+  opacity: 1;
+  background-color: var(--bg-color);
+  height: auto;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  @media screen and (max-width: 767px) {
+    height: 570px;
+    overflow-x: hidden;
+  }
+  @media screen and (min-width: $tab) {
+    // height: 552px;
+    height: 480px;
+  }
+  @media screen and (min-width: $desc) {
+    height: 558px;
+  }
+}
+.film-img {
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    -23px 0 20px -23px rgba(0, 0, 0, 0.6), 23px 0 20px -23px rgba(0, 0, 0, 0.6),
+    inset 0 0 40px rgba(0, 0, 0, 0.1);
+
+  @media screen and (max-width: 419px) {
+    width: 240px;
+    height: 357px;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: $mob) {
+    width: 240px;
+    height: 357px;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: $tab) {
+    width: 264px;
+    height: 374px;
+    margin-bottom: 0px;
+  }
+  @media screen and (min-width: $desc) {
+    width: 375px;
+    height: 478px;
+    margin-bottom: 0px;
+  }
+}
+
+.film-list {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $tab) {
+    width: 264px;
+    margin-left: 68px;
+  }
+  @media screen and (min-width: $desc) {
+    width: 391px;
+    margin-left: 16px;
+  }
+}
+.film-info {
+  margin-bottom: 12px;
+}
+
+.film-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.15;
+  color: var(--text-color-main);
+  margin-bottom: 4px;
+  @media screen and (min-width: $desc) {
+    font-size: 30px;
+    line-height: 1.17;
+  }
+}
+
+.box-film {
+  width: 34px;
+  height: 14px;
+  color: var(--text-color-header);
+  background: var(--brand-color);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin-right: 5px;
+}
+.box-film-vote {
+  width: 28px;
+  height: 14px;
+  display: flex;
+  justify-content: center;
+}
+.vote-film {
+  display: flex;
+}
+.film-text {
+  display: flex;
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  align-items: baseline;
+}
+.film-text__left {
+  width: 110px;
+  color: #8c8c8c;
+}
+
+.film-text__right {
+  color: var(--text-color-main);
+  width: 120px;
+  @media screen and (min-width: $tab) {
+    width: 200px;
+  }
+  @media screen and (min-width: $desc) {
+    width: 200px;
+  }
+}
+.film-info__item {
+  margin-bottom: 20px;
+}
+.film-about {
+  display: block;
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  color: var(--text-color-main);
+  overflow: hidden;
+  @media screen and (min-width: $tab) {
+    max-height: 155px;
+  }
+  @media screen and (min-width: $desc) {
+    max-height: 195px;
+  }
+}
+.btn-add {
+  display: flex;
+  bottom: 0px;
+  justify-content: space-between;
+  @media screen and (min-width: $desc) {
+    justify-content: flex-start;
+  }
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  background-color: var(--bg-color);
+  border: 1px solid var(--text-color-main);
+  border-radius: 5px;
+  padding: 0 5px;
+  text-transform: uppercase;
+  transition: background-color 0.05s ease-in-out, color 0.05s ease-in-out;
+  @media screen and (max-width: 419px) {
+    width: 110px;
+    height: 44px;
+    bottom: 0;
+  }
+  @media screen and (min-width: $mob) {
+    width: 110px;
+    height: 44px;
+    bottom: 0;
+  }
+
+  @media screen and (min-width: $tab) {
+    width: 125px;
+    height: 44px;
+  }
+  @media screen and (min-width: $desc) {
+    width: 136px;
+    height: 44px;
+    margin-right: 15px;
+  }
+  &:hover,
+  &[data-active='true'] {
+    background-color: var(--brand-color);
+    color: var(--text-color-header);
+    border-color: var(--brand-color);
+  }
+  &[data-active='true'] {
+    transition: color 0.05s 0.01s;
+    &:hover {
+      background-color: #f87e27;
+    }
+  }
+}
+
+.btn-modal-film {
+  top: 0;
+  right: 0;
+  margin-top: 16px;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 4;
+  &:hover,
+  &:focus {
+    background: var(--brand-color);
+  }
+}
+.btn-modal-film-icon {
+  fill: currentColor;
+  &:hover,
+  &:focus {
+    background: var(--brand-color);
+  }
+}
